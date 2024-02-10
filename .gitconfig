@@ -1,9 +1,9 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
 [user]
-	name = Gabriel Esteban Pinochet Soto
-	email = gpin2@pdx.edu
-[core]
-	editor = nvim
-[alias]
-	adog = log --all --decorate --oneline --graph
-    dog = log --decorate --oneline --graph
-    dg = log --decorate --graph
+	email = sreyn@proton.me
+	name = Sam Reynolds

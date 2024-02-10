@@ -1,5 +1,8 @@
 # Dotfiles
 
+A repository containing various configuration files for zsh, vim, git, etc.
+This is a fork of @homeomorfismo's repo.
+
 See [this nice video](https://www.youtube.com/watch?v=y6XCebnB9gs).
 
 ## Requirements 

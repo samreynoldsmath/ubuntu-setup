@@ -71,6 +71,9 @@ alias ll='ls -lah'
 # Command for syncing flashdrive
 source ~/.gustavo.sh
 
+# custom git commands
+source ~/.gitcmd.sh
+
 # Display computer info and date & time
 neofetch --color_blocks off --cpu_temp on
 date +"%Y-%m-%d %a %T"

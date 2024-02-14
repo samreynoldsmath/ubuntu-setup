@@ -102,8 +102,16 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ll='ls -lah'
 
+# If not running interactively, do not do anything
+[[ $- != *i* ]] && return
+# Otherwise start tmux
+[[ -z "$TMUX" ]] && exec tmux
+
+# Command for syncing flashdrive
 source ~/.gustavo.sh
 
+# Display computer info and date & time
 neofetch --color_blocks off --cpu_temp on
 date +"%Y-%m-%d %a %T"

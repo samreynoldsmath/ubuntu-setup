@@ -64,7 +64,7 @@ export EDITOR='nvim'
 alias ls='exa'
 alias ll='ls -lah'
 alias bat='batcat'
-
+alias update='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo snap refresh'
 # If not running interactively, do not do anything
 [[ $- != *i* ]] && return
 # Otherwise start tmux

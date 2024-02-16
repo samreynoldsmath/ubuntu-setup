@@ -32,7 +32,7 @@ gh auth login
 # download dotfiles and create symbolic links with `stow`
 dotfiles_dir = ~/dotfiles
 git clone https://github.com/samreynoldsmath/dotfiles $dotfiles_dir
-rm ~.zshrc
+rm ~/.zshrc
 sudo apt install -y stow
 stow $dotfiles_dir
 

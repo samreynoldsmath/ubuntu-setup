@@ -1,5 +1,7 @@
 #! /bin/bash
 
+UBUNTU_SETUP_DIR = ~/ubuntu-setup
+
 # get updates
 sudo apt update
 sudo apt upgrade -y
@@ -21,7 +23,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 pkill -f firefox
 sudo snap remove firefox
 chmod +x librewolf.sh
-./librewolf.sh
+$UBUNTU_SETUP_DIR/./librewolf.sh
 
 # configure `git` and GitHub CLI
 sudo apt install -y git gh
@@ -38,4 +40,11 @@ stow $dotfiles_dir
 sudo apt autoremove -y
 
 # reboot the system to apply changes
-reboot
+source $UBUNTU_SETUP_DIR/yn.sh
+echo "The system must reboot for all changes to take effect. Reboot now?"
+if confirm; then
+    reboot
+else
+    echo "Reboot the system when you are ready."
+fi
+

@@ -23,3 +23,6 @@ EOF
 # install librewolf
 sudo apt update
 sudo apt install -y librewolf
+
+# set default web browser
+xdg-settings set default-web-browser librewolf.desktop

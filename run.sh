@@ -12,30 +12,35 @@ setup_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $setup_dir/utils.sh
 
 # install some dependencies
-sudo apt install -y cmake curl lua libfuse2 virtualenv
+sudo apt install -y cmake curl libfuse2 virtualenv
 
 # install command line tools
 sudo apt install -y zsh neovim tmux fzf exa zoxide tree ripgrep bat neofetch
 
 # install OhMyZsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # replace firefox with librewolf
-pkill -f firefox
-sudo snap remove firefox
-chmod +x librewolf.sh
-$setup_dir/./librewolf.sh
+echo "Would you like to replace FireFox with LibreWolf?"
+if confirm_prompt; then
+    pkill -f firefox
+    sudo snap remove firefox
+    chmod +x librewolf.sh
+    $setup_dir/./librewolf.sh
+fi
 
 # configure `git` and GitHub CLI
 sudo apt install -y git gh
 gh auth login
 
 # download dotfiles and create symbolic links with `stow`
-dotfiles_dir = ~/dotfiles
+dotfiles_dir=~/dotfiles
 git clone https://github.com/samreynoldsmath/dotfiles $dotfiles_dir
 rm ~/.zshrc
 sudo apt install -y stow
-stow $dotfiles_dir
+cd $dotfiles_dir
+stow .
+cd $setup_dir
 
 # execute distribution-specific commands
 distro=$(get_linux_distribution)

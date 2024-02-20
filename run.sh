@@ -16,6 +16,9 @@ sudo apt install -y cmake curl lua libfuse2 virtualenv
 # install command line tools
 sudo apt install -y zsh neovim tmux fzf exa zoxide tree ripgrep bat neofetch
 
+# install caffeine, used to prevent sleep
+sudo apt install -y caffeine
+
 # install OhMyZsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 

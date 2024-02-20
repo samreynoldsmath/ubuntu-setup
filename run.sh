@@ -12,13 +12,14 @@ setup_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $setup_dir/utils.sh
 
 # install some dependencies
-sudo apt install -y cmake curl libfuse2 virtualenv
+sudo apt install -y cmake curl libfuse2 virtualenv fonts-powerline
 
 # install command line tools
 sudo apt install -y zsh neovim tmux fzf exa zoxide tree ripgrep bat neofetch
 
 # install OhMyZsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+chsh -s $(which zsh)
 
 # replace firefox with librewolf
 echo "Would you like to replace FireFox with LibreWolf?"

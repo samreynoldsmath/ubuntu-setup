@@ -19,7 +19,7 @@ function gustavo() {
 	DRIVEPATH=/media/$USER/$DRIVENAME
 
 	# remote repository
-	REMOTE_REPO=$DRIVEPATH/Documents/sec_docs.git
+	REMOTE_REPO=$DRIVEPATH/sdoc/sdoc.git
 
 	# local repository
 	LOCAL_REPO=/home/$USER/Documents

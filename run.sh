@@ -18,7 +18,7 @@ sudo apt install -y cmake curl libfuse2 virtualenv fonts-powerline
 sudo snap install nvim
 
 # install command line tools
-sudo apt install -y zsh tmux fzf exa zoxide tree ripgrep bat neofetch
+sudo apt install -y zsh tmux fzf exa zoxide tree ripgrep bat neofetch rename
 
 # install OhMyZsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended

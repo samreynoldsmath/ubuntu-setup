@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# TODO configuration prompt before anything else
+
 # get updates
 sudo apt update
 sudo apt upgrade -y
@@ -12,16 +14,26 @@ setup_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source $setup_dir/utils.sh
 
 # install some dependencies
-sudo apt install -y cmake curl libfuse2 virtualenv fonts-powerline
-
-# install text editor
-sudo snap install nvim
+sudo apt install -y cmake curl libfuse2 fonts-powerline
 
 # install command line tools
 sudo apt install -y zsh tmux fzf exa zoxide tree ripgrep bat neofetch rename
 
+# packages used for Python development
+sudo apt install -y virtualenv
+
+# packages used for LaTeX
+sudo apt install -y latexmk
+
+# TODO install text editor in separate script
+sudo snap install nvim
+
+# TODO install npm
+# TODO configure nvim with lazyvim
+
 # install OhMyZsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+zurl="https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh"
+sh -c "$(curl -fsSL $zurl)" "" --unattended
 chsh -s $(which zsh)
 
 # replace firefox with librewolf

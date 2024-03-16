@@ -23,13 +23,15 @@ sudo apt install -y zsh tmux fzf exa zoxide tree ripgrep bat neofetch rename
 sudo apt install -y virtualenv
 
 # packages used for LaTeX
-sudo apt install -y latexmk
+sudo apt install -y latexmk texlive-latex-extra
 
 # TODO install text editor in separate script
 sudo snap install nvim
 
 # TODO install npm
 # TODO configure nvim with lazyvim
+# TODO tmux
+# TODO nerd fonts
 
 # install OhMyZsh
 zurl="https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh"

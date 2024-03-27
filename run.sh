@@ -26,12 +26,17 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 chsh -s $(which zsh)
 
 # install homebrew
-<BS/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-(
-	echo
-	echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"'
-) >>/home/sam/.zshrc
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+#eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# pipx
+sudo apt install pipx
+pipx ensurepath
+pipx install argcomplete
+activate-global-python-argcomplete
+
+# ruff
+pipx install ruff ruff-lsp
 
 # replace firefox with librewolf
 echo "Would you like to replace FireFox with LibreWolf?"

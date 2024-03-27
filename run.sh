@@ -39,6 +39,7 @@ activate-global-python-argcomplete
 # ruff
 pipx install ruff
 pipx install ruff-lsp
+pipx ensurepath
 
 # replace firefox with librewolf
 echo "Would you like to replace FireFox with LibreWolf?"

@@ -8,9 +8,8 @@ Shell script to configure a fresh install of Ubuntu or Kubuntu to my preferences
 chmod +x ~/ubuntu-setup/run.sh && ~/ubuntu-setup/./run.sh
 ```
 
-## dotfiles
-This repo is designed to work with [my dot files](https://github.com/samreynoldsmath/dotfiles).
-
-## LibreWolf
-[A fork of FireFox](https://librewolf.net/) with sensible defaults.
+## Some of the tools I use 
+- [stow](https://www.gnu.org/software/stow/) is a command line tool useful for managing dotfiles.
+- [LibreWolf](https://librewolf.net/) is a fork of Firefox with sensible defaults.
+- [LazyVim](https://www.lazyvim.org/), a collection of configuration files for NeoVim 
 

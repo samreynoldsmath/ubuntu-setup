@@ -48,8 +48,12 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git virtualenv)
+plugins=(git virtualenv tmux)
 
+# Start tmux automatically with tmux plugin
+ZSH_TMUX_AUTOSTART=true
+
+# Load OhMyZsh
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -65,10 +69,6 @@ alias ls='exa'
 alias ll='ls -lah'
 alias bat='batcat'
 alias update='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo snap refresh'
-# If not running interactively, do not do anything
-[[ $- != *i* ]] && return
-# Otherwise start tmux
-[[ -z "$TMUX" ]] && exec tmux
 
 # Command for syncing flashdrive
 source ~/.gustavo.sh

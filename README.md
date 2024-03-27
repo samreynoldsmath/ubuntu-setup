@@ -1,11 +1,11 @@
 # ubuntu-setup
-Shell script to configure a fresh install of Ubuntu or Kubuntu to my preferences.
+Shell script to configure a fresh install of Ubuntu or Kubuntu to my preferences. Also contains some dotfiles that can be managed with stow, which was inspired by https://github.com/homeomorfismo/dotfiles  
 
 ## Instructions
 1. Save these files in a folder called `ubuntu-setup` in your home directory `~`.
 2. Open a terminal window by pressing `Crtl + Alt + T` and type
 ```
-chmod +x ~/ubuntu-setup/run.sh && ~/ubuntu-setup/./run.sh
+chmod +x ~/ubuntu-setup/scripts/run.sh && ~/ubuntu-setup/scripts/./run.sh
 ```
 
 ## Some of the tools I use 

@@ -11,6 +11,9 @@ setup_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # import some helper functions
 source $setup_dir/utils.sh
 
+# install javascript stuff
+sudo apt install -y nodejs npm
+
 # install some dependencies
 sudo apt install -y cmake curl libfuse2 virtualenv fonts-powerline
 
@@ -21,6 +24,14 @@ sudo apt install -y zsh tmux fzf exa zoxide tree ripgrep bat neofetch
 # install OhMyZsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 chsh -s $(which zsh)
+
+# install homebrew
+<BS/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+(
+	echo
+	echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"'
+) >>/home/sam/.zshrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # replace firefox with librewolf
 echo "Would you like to replace FireFox with LibreWolf?"

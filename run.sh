@@ -11,8 +11,9 @@ setup_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # import some helper functions
 source $setup_dir/utils.sh
 
-# install javascript stuff
-sudo apt install -y nodejs npm
+# install nodejs stuff
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm install node
 
 # install some dependencies
 sudo apt install -y cmake curl libfuse2 virtualenv fonts-powerline
@@ -36,7 +37,8 @@ pipx install argcomplete
 activate-global-python-argcomplete
 
 # ruff
-pipx install ruff ruff-lsp
+pipx install ruff
+pipx install ruff-lsp
 
 # replace firefox with librewolf
 echo "Would you like to replace FireFox with LibreWolf?"

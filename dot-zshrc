@@ -61,9 +61,6 @@ source $ZSH/oh-my-zsh.sh
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'
 
-# set brew command
-#eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -83,13 +80,15 @@ source ~/.gitcmd.sh
 neofetch --color_blocks off --cpu_temp on
 date +"%Y-%m-%d %a %T"
 
-# Created by `pipx` on 2024-03-27 20:13:01
+# pipx
 export PATH="$PATH:/home/sam/.local/bin"
-
 autoload -U bashcompinit
 bashcompinit
 eval "$(register-python-argcomplete pipx)"
 
+# for poetry completions
+fpath+=~/.zfunc
+autoload -Uz compinit && compinit
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

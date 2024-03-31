@@ -13,10 +13,15 @@ setup_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # import some helper functions
 source $setup_dir/utils.sh
 
+# install nodejs stuff
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm install node
+
 # install some dependencies
 sudo apt install -y cmake curl libfuse2 fonts-powerline
 
 # install command line tools
+sudo snap install nvim --classic
 sudo apt install -y zsh tmux fzf exa zoxide tree ripgrep bat neofetch rename
 
 # packages used for Python development
@@ -37,6 +42,21 @@ sudo snap install nvim
 zurl="https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh"
 sh -c "$(curl -fsSL $zurl)" "" --unattended
 chsh -s $(which zsh)
+
+# install homebrew
+#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+#eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# pipx
+sudo apt install pipx
+pipx ensurepath
+pipx install argcomplete
+activate-global-python-argcomplete
+
+# ruff
+pipx install ruff
+pipx install ruff-lsp
+pipx ensurepath
 
 # replace firefox with librewolf
 echo "Would you like to replace FireFox with LibreWolf?"

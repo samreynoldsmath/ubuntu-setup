@@ -28,7 +28,7 @@ sudo apt install -y zsh tmux fzf exa zoxide tree ripgrep bat neofetch rename
 sudo apt install -y virtualenv
 
 # packages used for LaTeX
-sudo apt install -y latexmk texlive-latex-extra
+sudo apt install -y latexmk texlive-full
 
 # TODO install text editor in separate script
 sudo snap install nvim

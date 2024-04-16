@@ -78,16 +78,6 @@ source ~/.gustavo.sh
 # custom git commands
 source ~/.gitcmd.sh
 
-# pipx
-export PATH="$PATH:/home/sam/.local/bin"
-autoload -U bashcompinit
-bashcompinit
-eval "$(register-python-argcomplete pipx)"
-
-# for poetry completions
-fpath+=~/.zfunc
-autoload -Uz compinit && compinit
-
 # node version manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

@@ -43,16 +43,6 @@ zurl="https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh"
 sh -c "$(curl -fsSL $zurl)" "" --unattended
 chsh -s $(which zsh)
 
-# install homebrew
-#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-#eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# pipx
-sudo apt install pipx
-pipx ensurepath
-pipx install argcomplete
-activate-global-python-argcomplete
-
 # ruff
 pipx install ruff
 pipx install ruff-lsp

@@ -9,3 +9,5 @@
 	name = Sam Reynolds
 [pull]
 	rebase = false
+[init]
+	defaultBranch = main

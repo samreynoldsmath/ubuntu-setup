@@ -22,7 +22,7 @@ sudo apt install -y cmake curl libfuse2 fonts-powerline
 
 # install command line tools
 sudo snap install nvim --classic
-sudo apt install -y zsh tmux fzf exa zoxide tree ripgrep bat neofetch rename
+sudo apt install -y zsh tmux fzf eza zoxide tree ripgrep bat neofetch rename
 
 # packages used for Python development
 sudo apt install -y virtualenv

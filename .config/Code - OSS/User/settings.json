@@ -1,0 +1,7 @@
+{
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "latex-workshop.view.pdf.invert": 1,
+    "editor.rulers": [
+        80
+    ]
+}
